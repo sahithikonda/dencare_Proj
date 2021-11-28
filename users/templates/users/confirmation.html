@@ -1,0 +1,25 @@
+
+{% extends "dentalfaqs/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<html lang="en">
+	<head>
+		  <title>Django CRUD Operations</title>
+		  <meta charset="utf-8">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+	</head>
+
+	<h1>We are happy to have you!</h1>
+
+	<h2> Here are your Booking Details:</h2>
+		<p>Name : {{your_name}}</p>
+		<p>Phone : {{your_phone}}</p>
+		<p>Your slot : {{Choose_your_slot}}</p>
+		<p>Day selected : {{Choose_day}}</p>
+		<p>Doctor appointed : {{Choose_Doctor}}</p>
+		<p>Service selected : {{Type_of_service}}</p>
+
+{% endblock content %}

@@ -1,0 +1,102 @@
+{% extends "dentalfaqs/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-heading text-center white">
+					<h2> Request an Appointment </h2>
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+			<!--	appointment form -->
+				<div class="book-form">
+					<form action="#" method="post">
+						{% csrf_token %}
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group mb=30">
+									<input type="text" name="your_name"
+									class="form-control" placeholder="Your Name"required>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group mb-30">
+									<input type="text" name="your_phone"
+									class="form-control" placeholder=" Your phone" required>
+								</div>
+							</div>	
+							<div class="col-md-6">
+								<div class="form-group mb-30">
+									<input type="email" name="your_email"
+									class="form-control" placeholder=" Your Email" required>
+								</div>
+							</div>	
+							<div class="col-md-6">
+								<div class="form-group mb-30">
+									<input type="text" name="your_address"
+									class="form-control" placeholder=" Your Address" required>
+								</div>
+							</div>	
+							<div class="col-md-6">
+								<div class="form-group mb-30">
+									<select name="Choose_your_slot" class="form-control">
+										<option value="Choose Your Slot">Choose Your Slot</option>
+										<option value="9:00-10:00">9:00-10:00</option>
+										<option value="11:00-12:00">11:00-12:00</option>
+										<option value="13:00-14:00">13:00-14:00</option>
+										<option value="15:00-16:00">15:00-16:00</option>
+										<option value="17:00-18:00">17:00-18:00</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group mb-30">
+									<select name="Choose_day" class="form-control">
+										<option value="Choose Day">Choose Day</option>
+										<option value="Monday/Lundi">Monday/Lundi</option>
+										<option value="Tuesday/Mardi">Tuesday/Mardi</option>
+										<option value="Wednesday/Mercredi">Wednesday/Mercredi</option>
+										<option value="Thursday/Jeudi">Thursday/Jeudi</option>
+										<option value="Friday/Vendredi">Friday/Vendredi</option>
+									</select>
+								</div>
+							</div>		
+							<div class="col-md-6">
+								<div class="form-group mb-30">
+									<select name="Choose_Doctor" class="form-control">
+										<option value="Choose Doctor">Choose Doctor</option>
+										<option value="Dr.Alex">Dr.Alex</option>
+										<option value="Dr.James">Dr.James</option>
+										<option value="Dr.Mathew">Dr.Mathew</option>
+										<option value="Dr.Maria">Dr.Maria</option>
+										<option value="Dr.Wendy">Dr.Wendy</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group mb-30">
+									<select name="Type_of_service" class="form-control">
+										<option value="Type of service">Type of service</option>
+										<option value="Online Consultation">Online Consultation</option>
+										<option value="In Person Appointment">In Person Appointment</option>
+									</select>
+								</div>
+							</div>	
+							<div class="col-12">
+								<div class="form-group mb-30">
+									<textarea name="your_message" class="form-control" placeholder="Your Message"></textarea>
+							    </div>
+							</div>    
+							<div class="col-12 text-center">
+									<button type="submit" class="btn dento-btn">Book Appointment</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+{% endblock content %}

@@ -1,0 +1,86 @@
+{% extends "dentalfaqs/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-heading text-center white">
+					<h2> Take a Survey </h2>
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+			<!--	survey form -->
+				<div class="Survey-form">
+					<form action="#" method="post">
+						{% csrf_token %}
+						<div class="col-md-12">
+								<div class="form-group mb-30">
+									<h4> Are your gums bleeding? </h4>
+									<select name="Choose_your_answer1" class="form-control">
+										<option value="Choose Your Answer">Choose Your Answer</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+						</div>
+						<div class="col-md-12">
+								<div class="form-group mb-30">
+									<h4> Did you visit a dentist recently? </h4>
+									<select name="Choose_your_answer2" class="form-control">
+										<option value="Choose Your Answer">Choose Your Answer</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+						</div>
+						<div class="col-md-12">
+								<div class="form-group mb-30">
+									<h4> Are you having severe pain? </h4>
+									<select name="Choose_your_answer3" class="form-control">
+										<option value="Choose Your Answer">Choose Your Answer</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+						</div>
+						<div class="col-md-12">
+								<div class="form-group mb-30">
+									<h4> Did you have a dental treatment before? </h4>
+									<select name="Choose_your_answer4" class="form-control">
+										<option value="Choose Your Answer">Choose Your Answer</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+						</div>
+						<div class="col-md-12">
+								<div class="form-group mb-30">
+									<h4>  Did you have the same problem before?  </h4>
+									<select name="Choose_your_answer5" class="form-control">
+										<option value="Choose Your Answer">Choose Your Answer</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+						</div>
+						<div class="col-md-12">
+								<div class="form-group mb-30">
+									<h4> Has it been more than 3 days with the problem? </h4>
+									<select name="Choose_your_answer6" class="form-control">
+										<option value="Choose Your Answer">Choose Your Answer</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+						</div>
+						<div class="col-12 text-center">
+									<button type="submit" class="btn dento-btn">Submit Results</button>
+						</div>
+					</form>	
+				</div>
+			</div>
+		</div>	
+{% endblock content %}		
