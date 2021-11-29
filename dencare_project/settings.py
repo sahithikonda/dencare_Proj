@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jumn14*0jtu6gl8&4jxe@)7=t-^2z5^ll+1qwznbipz%aj!s5$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['dencareapp.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -44,7 +44,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -123,10 +122,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 
-STATICFILES_DIRS = [ 
-    os.path.join(BASE_DIR, "static")
-    ]
-MEDIA_ROOT = os.path.join(BASE_DIR, "static/images")
 CRISPY_TEMPLATE_PACK= 'bootstrap4'
 LOGIN_REDIRECT_URL= 'DentalFAQs-home'
 LOGIN_URL= 'login'
