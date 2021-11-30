@@ -57,13 +57,13 @@ def survey(request):
     yes_count=0
     no_count=0
     if request.method == 'POST': 
-        Choose_your_answer1 = request.POST['Choose_your_answer1']
-        Choose_your_answer2 = request.POST['Choose_your_answer2']
-        Choose_your_answer3 = request.POST['Choose_your_answer3']
-        Choose_your_answer4 = request.POST['Choose_your_answer4']
-        Choose_your_answer5 = request.POST['Choose_your_answer5']
-        Choose_your_answer6 = request.POST['Choose_your_answer6']
-        if Choose_your_answer1 == 'Yes':
+        Choose_your_answer1 = request.POST.get("Choose_your_answer1", "Guest")
+        Choose_your_answer2 = request.POST.get("Choose_your_answer2", "Guest")
+        Choose_your_answer3 = request.POST.get("Choose_your_answer3", "Guest")
+        Choose_your_answer4 = request.POST.get("Choose_your_answer4", "Guest")
+        Choose_your_answer5 = request.POST.get("Choose_your_answer5", "Guest")
+        Choose_your_answer6 = request.POST.get("Choose_your_answer6", "Guest")
+        if Choose_your_answer1!=None and Choose_your_answer1 == 'Yes':
             yes_count = yes_count + 1
         else:
             no_count =  no_count + 1
